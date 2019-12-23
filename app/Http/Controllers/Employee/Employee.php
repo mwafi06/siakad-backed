@@ -367,6 +367,12 @@ class Employee extends Controller
         }
     }
 
+    /**
+     * function to delete employee data
+     *
+     * @param null $id
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function delete($id = null)
     {
         if (is_null($id))

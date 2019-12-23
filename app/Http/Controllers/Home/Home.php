@@ -5,6 +5,11 @@ use App\Http\Controllers\Controller;
 
 class Home extends Controller
 {
+    /**
+     * page home.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
         /*

@@ -7,16 +7,29 @@ use App\Models\EmployeeModel;
 class EmployeeRepository
 {
 
+    /**
+     * load employee model
+     * @return EmployeeModel
+     */
     public function employee()
     {
         return new EmployeeModel();
     }
 
+    /**
+     * load employee group model
+     * @return EmployeeGroupModel
+     */
     public function employeeGroup()
     {
         return new EmployeeGroupModel();
     }
 
+    /**
+     * find employee data for login
+     * @param $username
+     * @return bool
+     */
     public function findEmployeeLogin($username)
     {
         $query = $this->employee()
@@ -34,6 +47,12 @@ class EmployeeRepository
         }
     }
 
+    /**
+     * get employee data
+     * @param null $key
+     * @param null $value
+     * @return mixed
+     */
     public function getEmployee($key = null,$value = null)
     {
 
@@ -51,6 +70,12 @@ class EmployeeRepository
         return $query->get();
     }
 
+    /**
+     * get employee group data
+     * @param null $key
+     * @param null $value
+     * @return mixed
+     */
     public function getEmployeeGroup($key = null,$value = null)
     {
 
@@ -68,6 +93,12 @@ class EmployeeRepository
         return $query->get();
     }
 
+    /**
+     * update employee remember token data
+     * @param $uid
+     * @param $token
+     * @return mixed
+     */
     function updateEmployeeRememberToken($uid,$token)
     {
         return $this->employee()
@@ -75,6 +106,10 @@ class EmployeeRepository
             ->update(array('remember_token'=>$token));
     }
 
+    /**
+     * get dropdown employee group data
+     * @return mixed
+     */
     public function getDropdownEmployeeGroup()
     {
         /*
