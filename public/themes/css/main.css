@@ -1,0 +1,250 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #4f6e75;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #324145;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #111619;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.pagination{
+    float: right;
+}
+
+.required-text
+{
+    color: #dd4b39;
+}
+
+.no-padding{
+    padding: 0;
+}
+.no-margin{
+    margin: 0;
+}
+
+.mr-sm-5 {
+    margin-right: 5px;
+}
+
+.mt-0 {
+    margin-top: 0px !important;
+}
+
+.mt-5{
+    margin-top:5px !important;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mtb-10 {
+    margin: 10px 0;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mlr-5px{
+    margin: 0 5px;
+}
+
+.p-5{
+    padding: 5px;
+}
+
+.p-10{
+    padding: 10px;
+}
+
+.p-20{
+    padding: 20px;
+}
+
+.pb-5 {
+    padding-bottom: 5px;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+.ptb-20 {
+    padding: 20px 0;
+}
+
+.pl-10 {
+    padding-left: 10px !important;
+}
+
+.pr-0{
+    padding-right: 0;
+}
+.table-bordered {
+    border: 1px solid #dadada;
+}
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: 1px solid #dadada;
+}
+.table-bordered thead > tr {
+    background-color: #343a40 !important;
+    color: white;
+}
+.table-bordered thead > tr th {
+    border: 1px solid #000 !important;
+}
+.table-hover > tbody > tr:hover {
+    background-color: #ffc;
+}
+.table > caption + thead > tr td, .table > caption + thead > tr th {
+    background: #ddd;
+}
+.table > colgroup + thead > tr td, .table > colgroup + thead > tr th {
+    background: #ddd;
+}
+.table > thead:first-child > tr td, .table > thead:first-child > tr th {
+    vertical-align: middle;
+}
+
+.table td, .table th {
+    padding: 5px 10px;
+}
+
+.table-bordered [class*=icheck-]>label {
+    padding-left: 21px!important;
+    min-height: 22px;
+    line-height: 22px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.table-bordered [class*=icheck-]>input:first-child+input[type=hidden]+label::before, [class*=icheck-]>input:first-child+label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #D3CFC8;
+    border-radius: 0;
+    margin-left: -21px;
+}
+
+.card{
+    overflow: hidden;
+}
+
+.card .card-title{
+    font-size: 22px;
+}
+
+.card .card-body, .card .card-header{
+    padding: 10px;
+}
+
+.table-action{
+    margin: 0!important;
+}
+
+.table-action a,.table-action button{
+    cursor: pointer;
+}
+
+.see-password{
+    cursor: pointer;
+}
+
+.custom-control {
+    display: inline-block;
+    padding-left: 1.5rem;
+}
+
+.custom-control label::before,.custom-control label::after{
+    left: -1.5rem;
+}
+
+/*
+ * employee group section
+ */
+.employee-group .module-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: #007bff;
+    margin-bottom: 5px;
+    padding: 8px 10px;
+    color: #fff;
+}
+.employee-group .module-list.parent {
+    background: #007bff;
+    background: -moz-linear-gradient(top, #007bff 0%, #222533 100%);
+    background: -webkit-linear-gradient(top, #007bff 0%, #222533 100%);
+    background: -o-linear-gradient(top, #007bff 0%, #222533 100%);
+    background: -ms-linear-gradient(top, #007bff 0%, #222533 100%);
+    background: linear-gradient(to bottom, #007bff 0%, #222533 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#605ca8", endColorstr="#222533", GradientType=0);
+}
+.employee-group .module-list .form-check-inline {
+    width: unset;
+    padding: unset;
+    float: right;
+}
+.employee-group .module-list .form-check-inline label {
+    color: white;
+    cursor: pointer;
+    margin: 0;
+    margin-right: 5px;
+}
+.employee-group .module-list .form-check-inline input {
+    margin: 0;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/*
+ * employee group section
+ */
