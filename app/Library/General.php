@@ -313,7 +313,7 @@ class General
          */
         $user = $this->activeUser();
         $module = session()->has('module') ? session()->get('module') : generalRepository()->getModule();
-        $roles = session()->has('role') ? session()->get('role') : employeeRepository()->getEmployeeGroup('uid',$user->uid)->first() ;
+        $roles = session()->has('role') ? session()->get('role') : employeeRepository()->getEmployeeGroup('guid',$user->guid)->first() ;
         $roleMod = array();
 
         switch($role)
@@ -359,7 +359,7 @@ class General
         /*
          * define variable
          */
-        $currentUrl = '/'.preg_replace("/^\//","",\Request::path());
+        $currentUrl = '/'.preg_replace("/^\//","",request()->path());
         $category   = generalRepository()->getModuleCategory()->sortBy('order');
         $template   = NULL;
         $parent = $child = $sidebar = '';

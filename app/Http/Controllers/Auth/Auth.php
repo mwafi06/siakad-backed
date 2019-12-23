@@ -87,7 +87,7 @@ class Auth extends Controller
             /*
              * get employee group
              */
-            $employeeGroup = employeeRepository()->getEmployeeGroup('uid',$employee->uid)->first();
+            $employeeGroup = employeeRepository()->getEmployeeGroup('guid',$employee->guid)->first();
 
             /*
              * get list module
@@ -103,6 +103,7 @@ class Auth extends Controller
                 'user' => (object)array(
                     'username' => $employee->username,
                     'nis' => $employee->nis,
+                    'guid' => $employee->guid,
                 ),
                 'role' => $employeeGroup,
                 'module' => $module,
