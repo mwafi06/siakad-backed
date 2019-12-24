@@ -46,11 +46,11 @@ class GeneralRepository
 
         if (is_array($key))
         {
-            $query->where($key);
+            $query = $query->where($key);
         }
         elseif(!is_null($key) && !is_null($value))
         {
-            $query->where($key,$value);
+            $query = $query->where($key,$value);
         }
 
         return $query->get();
@@ -68,11 +68,11 @@ class GeneralRepository
 
         if (is_array($key))
         {
-            $query->where($key);
+            $query = $query->where($key);
         }
         elseif(!is_null($key) && !is_null($value))
         {
-            $query->where($key,$value);
+            $query = $query->where($key,$value);
         }
 
         return $query->get();
