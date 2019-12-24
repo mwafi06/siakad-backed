@@ -362,7 +362,7 @@ class General
         $currentUrl = '/'.preg_replace("/^\//","",\Request::path());
         $category   = generalRepository()->getModuleCategory()->sortBy('order');
         $template   = NULL;
-        $parent = $child = $sidebar = '';
+        $child = $sidebar = '';
 
         $sidebar .= "<ul class=\"nav nav-pills nav-sidebar flex-column  text-sm nav-legacy nav-flat nav-compact\" data-widget=\"treeview\" role=\"menu\" data-accordion=\"false\">";
 
@@ -371,7 +371,8 @@ class General
             /*
              * get category
              */
-            $data       = $this->getModule($cat->id,false);
+            $parent = '';
+            $data   = $this->getModule($cat->id,false);
 
             $sidebar .= "<li class=\"nav-header\">".strtoupper($cat->name)."</li>";
 
@@ -393,10 +394,10 @@ class General
                         }
                     }
 
-                    $parent = "<li class=\"nav-item has-treeview $active_parent\"><a href=\"#\" class=\"nav-link $active\"><i class=\"nav-icon $item->mod_icon\"></i><p>".ucfirst($item->mod_name)."<i class=\"right fas fa-angle-left\"></i></p></a>\n";
-
                     if ($modAccess)
                     {
+                        $parent .= "<li class=\"nav-item has-treeview $active_parent\"><a href=\"#\" class=\"nav-link $active\"><i class=\"nav-icon $item->mod_icon\"></i><p>".ucfirst($item->mod_name)."<i class=\"right fas fa-angle-left\"></i></p></a>\n";
+
                         /*
                          * generate child
                          */
@@ -412,7 +413,6 @@ class General
                         $parent .= $child;
                         $parent .= "</li>";
                     }
-
                 }
                 else {
                     if ($this->modAccess($item->mod_alias)) {
